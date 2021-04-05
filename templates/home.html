@@ -1,0 +1,22 @@
+<h1> Home Page</h1>
+<br>
+<hr>
+<h2>Flask App running</h2>
+
+<h3> Please Enter Your Email Below for Verification : </h3>
+
+<form method="POST">
+
+
+    {# This is a hidden tag in CSRF security feature. #}
+    {{ form.hidden_tag()}}
+    {{form.Email_message.label(cols="1000", rows="5",id='larger')}}
+    <br>
+    <br>
+    {{form.Email_message}}
+
+    <br>
+    <br>
+    {{form.submit}}
+
+</form>
